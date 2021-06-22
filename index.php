@@ -91,6 +91,22 @@ Olimpia Milano - Cantù | 55-60 -->
     ?>
 
     <!-- snack 2 -->
+    <h1>Snack 2</h1>
+    <h3>Prova a fare il login con una mail vailda tramite parametri GET</h3>
+    <h4>
+    <?php 
+        /* Passare come parametri GET name, mail e age e verificare (cercando i metodi che non conosciamo nella documentazione) che name sia più lungo di 3 caratteri, che mail contenga un punto e una chiocciola e che age sia un numero. Se tutto è ok stampare “Accesso riuscito”, altrimenti “Accesso negato” */
+        $name = $_GET['name'];
+        $mail = $_GET['mail'];
+        $age = $_GET['age'];
+        $re = '/[A-z]+[@]+[A-z]+[.]+[A-z]+/m';
 
+        if (strlen($name) > 3 && preg_match_all($re, $mail) && is_numeric($age)) {
+            echo 'acesso riuscito';
+        } else {
+            echo 'Accesso negato';
+        };
+    ?>
+    </h4>
 </body>
 </html>
