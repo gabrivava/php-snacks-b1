@@ -200,6 +200,49 @@ Olimpia Milano - Cantù | 55-60 -->
 
 
     <!-- Snack 6 -->
-    
+    <h1>Snack 6</h1>
+    <?php
+    // Utilizzare questo array: 
+    $db = [
+        'teachers' => [
+            [
+                'name' => 'Michele',
+                'lastname' => 'Papagni'
+            ],
+            [
+                'name' => 'Fabio',
+                'lastname' => 'Forghieri'
+            ]
+        ],
+        'pm' => [
+            [
+                'name' => 'Roberto',
+                'lastname' => 'Marazzini'
+            ],
+            [
+                'name' => 'Federico',
+                'lastname' => 'Pellegrini'
+            ]
+        ]
+    ]; 
+    //Stampiamo il nostro array mettendo gli insegnanti in un rettangolo grigio e i PM in un rettangolo verde.
+    ?>
+    <div style="background-color: grey; width: fit-content;">
+        <?php 
+        foreach ($db['teachers'] as $key => $value) {
+            var_dump($value);
+        };
+        //var_dump($db['teachers']); 
+        ?>
+    </div>
+    <div style="background-color: green; width: fit-content;">
+        <?php 
+        foreach ($db['pm'] as $key => $value) {
+            var_dump($value);
+        }; 
+        ?>
+    </div>
+    <?php
+    ?>
 </body>
 </html>
