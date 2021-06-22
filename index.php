@@ -242,7 +242,54 @@ Olimpia Milano - Cantù | 55-60 -->
         }; 
         ?>
     </div>
+
+
+    <!-- Snack 7 -->
+    <h1>Snack 7</h1>
     <?php
-    ?>
+    // Creare un array contenente qualche alunno di un’ipotetica classe. Ogni alunno avrà Nome, Cognome e un array contenente i suoi voti scolastici. Stampare Nome, Cognome e la media dei voti di ogni alunno.
+    $alunni = [
+        [
+            'nome' => 'gabriele',
+            'cognome' => 'Vavassori',
+            'voti' => [7, 8, 6, 9, 7],
+        ],
+        [
+            'nome' => 'franco',
+            'cognome' => 'berto',
+            'voti' => [7, 2, 6, 5, 6],
+        ],
+        [
+            'nome' => 'aldo',
+            'cognome' => 'baglio',
+            'voti' => [3, 5, 4, 5, 2],
+        ],
+        [
+            'nome' => 'giorgia',
+            'cognome' => 'rossi',
+            'voti' => [7, 10, 7, 10, 7],
+        ],
+    ];
+    for ($i=0; $i < count($alunni); $i++) { ?>
+        
+        <p>
+        Nome: <?php echo $alunni[$i]['nome'];?> 
+        Cognome: <?php echo $alunni[$i]['cognome'];?> 
+        Media Voti: <?php 
+            $qt = count($alunni[$i]['voti']);
+            $res = 0;
+            foreach ($alunni[$i]['voti'] as $n) {
+              $res += $n;
+            }
+            echo $res/$qt;
+        ?>
+        </p>
+        <?php
+        
+
+    }
+    ?> 
+
+    
 </body>
 </html>
