@@ -177,7 +177,29 @@ Olimpia Milano - Cantù | 55-60 -->
     }
     echo '<pre>';
     var_dump($newArray);
-    echo '</pre>';
+    
     ?>
+
+
+    <!-- snack 5 -->
+    <h1>Snack 5</h1>
+    <?php 
+        // Prendere un paragrafo abbastanza lungo, contenente diverse frasi. Prendere il paragrafo e suddividerlo in tanti paragrafi. Ogni punto un nuovo paragrafo.
+        $paragrafoLungo = 'Creiamo un array contenente le partite di basket di un’ipotetica tappa del calendario. Ogni array avrà una squadra di casa e una squadra ospite, punti fatti dalla squadra di casa e punti fatti dalla squadra ospite. Stampiamo a schermo tutte le partite con questo schema.';
+        ?>
+        <p>Paragrafo originale: <?php echo $paragrafoLungo;?></p>
+        <?php
+        $paragrafi = explode('.', $paragrafoLungo);
+        for ($i=0; $i < count($paragrafi); $i++) { 
+            if (strlen($paragrafi[$i]) > 0) {?>
+                <p><?php echo $paragrafi[$i];?></p>
+                <?php
+            }
+        }
+    ?>
+
+
+    <!-- Snack 6 -->
+    
 </body>
 </html>
