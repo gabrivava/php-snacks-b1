@@ -162,5 +162,22 @@ Olimpia Milano - Cantù | 55-60 -->
         echo '</pre>';
     }
     ?>
+
+    <!-- snack 4 -->
+    <h1>snack 4</h1>
+    <?php
+    //Creare un array con 15 numeri casuali, tenendo conto che l’array non dovrà contenere lo stesso numero più di una volta
+    $newArray = [];
+
+    while (count($newArray) < 15) {
+        $number = rand(1, 100);
+        if (!in_array($number, $newArray)) {
+            $newArray[] = $number;
+        }
+    }
+    echo '<pre>';
+    var_dump($newArray);
+    echo '</pre>';
+    ?>
 </body>
 </html>
