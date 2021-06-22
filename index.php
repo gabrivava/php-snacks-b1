@@ -14,6 +14,7 @@ Olimpia Milano - Cantù | 55-60 -->
 
     <!-- snack 1 -->
     <h1>Snack 1</h1>
+    <h3>Torneo Basket</h3>
     <!-- php Snack 1-->
     <?php 
         $partite = [
@@ -26,8 +27,8 @@ Olimpia Milano - Cantù | 55-60 -->
             [
                 'squadraCasa' => 'Olimpia Milano',
                 'squadraOspite' => 'Cantù',
-                'puntiSquadraCasa' => 50,
-                'puntiSquadraOspite' => 73,
+                'puntiSquadraCasa' => 55,
+                'puntiSquadraOspite' => 60,
             ],
             [
                 'squadraCasa' => 'Fara',
@@ -68,10 +69,28 @@ Olimpia Milano - Cantù | 55-60 -->
         ];
 
         // stampo a schermo
-        echo '<pre>';
+        /* echo '<pre>';
         var_dump($partite);
-        echo '</pre>';
+        echo '</pre>'; */
+
+        for ($i=0; $i < count($partite); $i++) { ?>
+            <!--  Olimpia Milano - Cantù | 55-60 -->
+            <p>
+            <?php
+            echo $partite[$i]['squadraCasa'];
+            echo ' - ';
+            echo $partite[$i]['squadraOspite'];
+            echo ' | ';
+            echo $partite[$i]['puntiSquadraCasa'];
+            echo ' - ';
+            echo $partite[$i]['puntiSquadraOspite'];
+            ?>
+            </p>
+        <?php
+        };
     ?>
+
+    <!-- snack 2 -->
 
 </body>
 </html>
