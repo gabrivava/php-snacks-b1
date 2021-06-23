@@ -54,8 +54,16 @@ var_dump($adsOk[$estratta]);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+    img {
+        width: 300px;
+    }
+    
+    </style>
 </head>
 <body>
-    <img src="<?php echo $adsOk[$estratta]['image_path']?>" alt="">
+    <img src="<?php echo $adsOk[$estratta]['image_path'];?>" alt="">
+    <img src="<?php $ads[rand(0, count($ads)-1)]['is_active'] ? $ads[rand(0, count($ads)-1)]['is_active'] : 'null' ?>" alt="">
+
 </body>
 </html>
